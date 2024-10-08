@@ -53,9 +53,8 @@ const PopUp = ({ isPopupOpen,setIsPopupOpen }) => {
   };
 
   return isPopupOpen?(
-    <div className="popup" >
-      {/* //Todo add onClick={()=>setIsPopupOpen(false) */}
-      <div className="create-group-modal">
+    <div className="popup" onClick={()=>setIsPopupOpen(false) }>
+      <div className="create-group-modal" onClick={(e)=>e.stopPropagation()}>
         <h2>Create New Group</h2>
         <div className="input-group">
           <label htmlFor="groupName">Group Name</label>
