@@ -1,5 +1,4 @@
 .logo-container {
-    flex: 3;
     background-color: rgb(218, 229, 245);
     text-align: center;
     display: flex;
@@ -9,12 +8,9 @@
     align-items: center;
 }
 
-.desc{
-    width: 600px;
-}
 
 .desc img{
-    width: 600px;
+    width: 70%;
 }
 
 .desc p{
@@ -30,6 +26,6 @@
 }
 
 .encryp img{
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
 }

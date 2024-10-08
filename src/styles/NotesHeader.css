@@ -1,5 +1,5 @@
 .notes-header {
-    flex: 1;
+    width: 35%;
 }
   
 .header {
@@ -12,13 +12,13 @@
 }
   
 .header h2{
-  margin: 20px;
+  margin: 1rem;
 }
 
 .notes-list {
   flex-grow: 1;
   overflow-y: auto;
-  max-height: 85%;
+  max-height: 87%;
 }
 
 
@@ -47,9 +47,9 @@
 .note-item {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 0.5rem;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 .note-item:hover{
   background-color: rgba(0, 0, 0, 0.219);
@@ -57,10 +57,10 @@
 }
   
 .note-icon {
-  width: 35px;
-  height: 35px;
+  width: 10%;
+  height: 10%;
   border-radius: 50%;
-  padding: 10px;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,18 +71,17 @@
   
 .add-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   background-color: #001858;
   color: white;
-  font-size: 3em;
-  font-weight: bolder;
-  width: 70px;
-  height: 70px;
+  font-size: 2.5em;
+  width: 5%;
+  height: 10%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 230px;
+  margin-left: 18%;
 }
   
