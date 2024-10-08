@@ -1,0 +1,85 @@
+.popup{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.create-group-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  z-index: 1;
+}
+  
+.create-group-modal  h2 {
+  margin-bottom: 30px;
+}
+  
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+  
+.input-group input {
+  width: 65%;
+  margin-left: 20px;
+  padding: 5px 15px;
+  font-size: 1em;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+  
+.color-picker {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+  
+.color-options {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  width: 200px;
+}
+  
+.color-circle {
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+  
+  
+.selected {
+  border: 3px solid black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-button {
+  background-color: #001f8b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+.create-button:hover {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+  
