@@ -8,8 +8,8 @@ const PopUp = ({ isPopupOpen,setIsPopupOpen }) => {
   const [selectedColor, setSelectedColor] = useState(null);
 
   
-  if(localStorage.getItem("notes")==''){
-    localStorage.setItem("notes",[])
+  if(getDataFromLocalStorage(constants.TOTAL_NOTES_KEY)== null){
+    addDatatoLocalStorage(constants.TOTAL_NOTES_KEY,[])
   }
 
  
