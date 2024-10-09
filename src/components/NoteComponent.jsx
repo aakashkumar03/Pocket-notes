@@ -3,7 +3,7 @@ import '../styles/NotesComponent.css';
 import { formatTimestamp ,addDatatoLocalStorage,getDataFromLocalStorage,demoObj,getUserKey} from '../utils/snippets';
 import constants from '../utils/constants';
 
-const NotesComponent = ({ isChatOpen, notesObj }) => {
+const NotesComponent = ({ isChatOpen, notesObj ,setIsChatOpen,isMobileView}) => {
     
     const [newNote, setNewNote] = useState('');
     const buttonRef = useRef(null); 
@@ -36,9 +36,17 @@ const NotesComponent = ({ isChatOpen, notesObj }) => {
         backgroundColor: storedNoteObj?.color || "red"
     };
 
+    const handleBack=()=>{
+        setIsChatOpen(false)
+    }
     return isChatOpen ? (
         <div className="notes-container">
             <div className="chat-header">
+                {isMobileView?
+                <button className='back-btn' onClick={handleBack}>
+                    <img src={constants.BACK_BTN} alt="Back-btn-img" />
+                </button>:null
+                }
                 <div className="user-icon" style={iconStyle}>{storedNoteObj.initials}</div>
                 <span className="title">{storedNoteObj.groupName}</span>
             </div>

@@ -83,3 +83,9 @@
   transition: transform 0.3s;
 }
   
+@media(max-width: 380px) {
+  .create-group-modal {
+  padding: 5%;
+  width: 70%;
+ } 
+}
