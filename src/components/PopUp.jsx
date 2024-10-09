@@ -26,7 +26,7 @@ const PopUp = ({ isPopupOpen,setIsPopupOpen }) => {
     
       const userNotes={
         id:userId,
-        groupName:groupName,
+        groupName:getNoteName(groupName),
         initials:getInitials(groupName),
         color:selectedColor,
         notes:[]
