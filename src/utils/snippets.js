@@ -32,7 +32,7 @@ export const getInitials=(str)=> {
   if (words.length === 1) {
     return str.slice(0, 1).toUpperCase();
   }
-  const initials = words.map(word => word[0].toUpperCase()).join('');
+  const initials = words.slice(0, 2).map(word => word[0].toUpperCase()).join('');
   return initials;
 }
 
