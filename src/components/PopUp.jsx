@@ -15,16 +15,17 @@ const PopUp = ({ isPopupOpen,setIsPopupOpen }) => {
  
   const handleCreate = () => {
     if (groupName && selectedColor ) {
-      const userName=groupName.toLowerCase().replace(/\s+/g, '');
       
-      if (localStorage.getItem(userName)!=null) {
+      const userId=Math.floor(10000 + Math.random() * 90000)
+      
+      if (getDataFromLocalStorage(userId)!=null) {
         setGroupName('')
         setSelectedColor(null)
-        return alert(constants.MSG_UNIQUE_GROUP_NAME)
+        return alert(constants.MSG_UNIQUE_GROUP_ID)
       }
     
       const userNotes={
-        id:Math.floor(10000 + Math.random() * 90000),
+        id:userId,
         groupName:groupName,
         initials:getInitials(groupName),
         color:selectedColor,
@@ -37,13 +38,14 @@ const PopUp = ({ isPopupOpen,setIsPopupOpen }) => {
       }
 
       const notesObj ={
+        id:userId,
         initials:getInitials(groupName),
         name:getNoteName(groupName),
         color:selectedColor
       }
       totalNotes= [...totalNotes,notesObj ]
       addDatatoLocalStorage(constants.TOTAL_NOTES_KEY,totalNotes);
-      addDatatoLocalStorage(userName,userNotes);
+      addDatatoLocalStorage(userId,userNotes);
       setSelectedColor(null)
       setGroupName('')
       setIsPopupOpen(false)

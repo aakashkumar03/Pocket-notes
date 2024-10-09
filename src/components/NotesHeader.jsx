@@ -8,9 +8,8 @@ const NotesHeader = ({setIsPopupOpen,setIsChatOpen,setNotesObj}) => {
     getDataFromLocalStorage(constants.TOTAL_NOTES_KEY):[]
     
     const handlePopUp=()=>setIsPopupOpen(true)
-    const handleNotes=(initials,groupName)=>{
-        const userName= groupName.toLowerCase().replace(/\s+/g, '');
-        const notesObj = getDataFromLocalStorage(userName);
+    const handleNotes=(initials,groupId)=>{
+        const notesObj = getDataFromLocalStorage(groupId);
         setNotesObj(notesObj)
         setIsChatOpen(true)
     }
@@ -22,7 +21,7 @@ const NotesHeader = ({setIsPopupOpen,setIsChatOpen,setNotesObj}) => {
         </div>
         <div className="notes-list">
             {notesGroupsData.map((group, index) => (
-            <li key={index} className="note-item" onClick={()=>handleNotes(group.initials,group.name)}>
+            <li key={index} className="note-item" onClick={()=>handleNotes(group.initials,group.id)}>
                 <div
                 className="note-icon"
                 style={{ backgroundColor: group.color }}

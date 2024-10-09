@@ -7,9 +7,8 @@ const NotesComponent = ({ isChatOpen, notesObj ,setIsChatOpen,isMobileView}) => 
     
     const [newNote, setNewNote] = useState('');
     const buttonRef = useRef(null); 
-    let userNameStr = notesObj?.groupName || '';
     
-    const userKey=getUserKey(userNameStr)
+    const userKey=notesObj?.id?notesObj.id:null
 
 
     
